@@ -631,7 +631,7 @@ class docket_parser():
                         # Error handling; copy the docket out and continue.
                         if (content == "Error, could not find docket_table." or
                             content == "Error, could not find docket_entries."):
-                            print file, content
+                            print(file, content)
                             with open(self.bugged_path + '/' + file, 'w') as bugged:
                                 bugged.write(source)
                             continue
