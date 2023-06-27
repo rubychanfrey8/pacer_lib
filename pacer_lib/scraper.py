@@ -108,7 +108,7 @@ class search_agent():
         if type(payload) is not dict:
             raise TypeError("'payload' must be a dictionary.")
         if 'case_no' not in payload:
-            print "Warning: You are not searching for a case number."
+            print("Warning: You are not searching for a case number.")
         response = self.br.post(locator_url, data=payload)
         time.sleep(self.wait_time)
         return response.text
@@ -360,7 +360,7 @@ class search_agent():
         # 3. Find the final download link from the'charge' page.
         # (there used to be a retry if cannot open, but removed, for now)
         response = self.br.get(document_link)
-        print "continue"
+        print("continue")
         # Parse the 'charge' page to find the 'viewdoc' url that will request
         # the actual document.
 
